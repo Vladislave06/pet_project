@@ -3,7 +3,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -12,6 +12,7 @@
 
 html,
 body {
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -40,3 +41,95 @@ a {
     color-scheme: dark;
   }
 }
+
+.login_page {
+  height: 100%;
+  background-image: url("/images/login_page_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login_page_container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto; /* Центрирование контейнера по горизонтали */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Корректировка для центрирования */
+}
+
+
+.login_wrapper {
+max-width: 540px;
+width: 100%;
+}
+
+.logo_wrapper {
+  text-align: center;
+  font-weight: 700;
+}
+
+.login_input_wrapper {
+  text-align: center;
+}
+
+.btn_login {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-login {
+  background: linear-gradient(to right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  border: none;
+  color: white;
+  padding: 12px 50px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 45px; /* Увеличиваем отступ для иконки */
+}
+
+.input-icon .icon-email,
+.input-icon .icon-password {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 24px; /* Размер иконки */
+  height: 24px; /* Размер иконки */
+  pointer-events: none; /* Чтобы не мешала вводу текста */
+}
+
+.form-floating > .input-icon > input ~ label {
+  position: absolute;
+  top: 50%;
+  left: 45px; /* Совпадает с отступом input */
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 75%; /* Уменьшение размера шрифта */
+  color: #6c757d;
+}
+
+
+
+
+
+
